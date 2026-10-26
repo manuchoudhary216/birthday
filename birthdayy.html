@@ -1,0 +1,726 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Akshansh 🌷</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --pink: #f6c5d7;
+  --light-pink: #fff0f5;
+  --lavender: #e7ddff;
+  --cream: #fffaf0;
+  --rose: #c75e91;
+  --text: #76546e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #fff0f5,
+    #f0eaff,
+    #fff7e9,
+    #fce7f3
+  );
+  background-size: 300% 300%;
+  animation: pastelBG 14s ease infinite;
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+}
+
+button:focus-visible {
+  outline: 3px solid #ad6bb0;
+  outline-offset: 4px;
+}
+
+section {
+  padding: 75px 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  color: var(--rose);
+}
+
+h2 {
+  font-size: clamp(27px, 5vw, 39px);
+  margin-bottom: 18px;
+}
+
+p {
+  line-height: 1.9;
+}
+
+.small-heading {
+  color: var(--rose);
+  font-size: 12px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+/* HERO SECTION */
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 85px 20px 45px;
+  overflow: hidden;
+}
+
+.badge {
+  background: #ffffffc9;
+  border: 1px solid white;
+  border-radius: 30px;
+  padding: 11px 20px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(42px, 9vw, 82px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: #a984d6;
+}
+
+.hero-text {
+  max-width: 520px;
+  font-size: 17px;
+}
+
+.cake {
+  font-size: 85px;
+  margin: 22px 0;
+  animation: floatCake 3s ease-in-out infinite;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #e99abc, #b99be8);
+  color: white;
+  padding: 15px 26px;
+  border-radius: 30px;
+  margin: 12px 5px;
+  font-size: 15px;
+  box-shadow: 0 8px 22px #bd83b82b;
+  transition: transform .3s;
+}
+
+.primary-btn:hover {
+  transform: translateY(-4px);
+}
+
+.secondary-btn {
+  background: white;
+  color: var(--rose);
+  border: 1px solid #f3c7dc;
+  padding: 14px 22px;
+  border-radius: 30px;
+  margin: 8px 5px;
+}
+
+/* DECORATIVE STICKERS */
+
+.sticker {
+  position: absolute;
+  font-size: clamp(25px, 5vw, 43px);
+  pointer-events: none;
+  animation: floatCake 4s ease-in-out infinite;
+}
+
+.s1 { top: 17%; left: 8%; }
+.s2 { top: 27%; right: 8%; animation-delay: .7s; }
+.s3 { bottom: 15%; left: 12%; animation-delay: 1.2s; }
+.s4 { bottom: 18%; right: 10%; animation-delay: .4s; }
+
+/* PHOTO GALLERY */
+
+.gallery {
+  max-width: 1000px;
+  margin: 35px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.photo-card {
+  background: #fffdfc;
+  padding: 11px 11px 19px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px #95739b20;
+  transition: transform .3s;
+}
+
+.photo-card:nth-child(odd) {
+  transform: rotate(-2deg);
+}
+
+.photo-card:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.photo-card:hover {
+  transform: rotate(0) translateY(-6px);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 260px;
+  display: block;
+  object-fit: cover;
+  border-radius: 5px;
+  background: #f8e5ef;
+}
+
+.photo-card p {
+  padding-top: 14px;
+  font-size: 14px;
+}
+
+.photo-number {
+  color: #c78eac;
+  font-size: 11px;
+  margin-top: 5px;
+}
+
+/* FRIENDSHIP WISHES */
+
+.friendship-cards {
+  max-width: 900px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.friend-card {
+  padding: 27px 17px;
+  background: #ffffffbd;
+  border: 1px solid white;
+  border-radius: 22px;
+  line-height: 1.9;
+  box-shadow: 0 8px 24px #b68ab51a;
+}
+
+.friend-card .emoji {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.friend-card strong {
+  color: var(--rose);
+}
+
+/* BIRTHDAY LETTER */
+
+.letter {
+  max-width: 680px;
+  margin: 30px auto 0;
+  padding: 35px 28px;
+  background: #ffffffd9;
+  border: 1px solid white;
+  border-radius: 25px;
+  box-shadow: 0 12px 35px #b68ab522;
+  line-height: 2;
+  font-size: 16px;
+}
+
+.letter .signature {
+  color: var(--rose);
+  font-weight: bold;
+  margin-top: 18px;
+}
+
+/* SECRET SURPRISE */
+
+.secret-box {
+  display: none;
+  max-width: 650px;
+  margin: 25px auto 0;
+  padding: 30px 24px;
+  border: 1px dashed #dfa0c2;
+  background: #ffffffdf;
+  border-radius: 24px;
+  line-height: 2;
+}
+
+.secret-box.show {
+  display: block;
+  animation: reveal .7s ease;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  padding: 38px 18px;
+  background: #ffffff83;
+  line-height: 2;
+  font-size: 14px;
+}
+
+.footer-flower {
+  font-size: 25px;
+}
+
+/* FLOATING EMOJIS */
+
+.floating-emoji {
+  position: fixed;
+  bottom: -40px;
+  z-index: 200;
+  pointer-events: none;
+  animation: floatUp 5s linear forwards;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes floatCake {
+  50% {
+    transform: translateY(-10px) rotate(3deg);
+  }
+}
+
+@keyframes pastelBG {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+  }
+
+  .photo-card img {
+    height: 220px;
+  }
+
+  .friendship-cards {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 55px 15px;
+  }
+
+  .letter {
+    padding: 25px 19px;
+  }
+}
+
+@media (max-width: 420px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    max-width: 310px;
+  }
+
+  .photo-card img {
+    height: 330px;
+  }
+
+  .s1 { left: 3%; }
+  .s2 { right: 3%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HOME PAGE -->
+
+<section class="hero" id="home">
+
+  <span class="sticker s1">🌷</span>
+  <span class="sticker s2">🦋</span>
+  <span class="sticker s3">💗</span>
+  <span class="sticker s4">🌸</span>
+
+  <div class="badge">
+    ✨ A LITTLE SURPRISE MADE JUST FOR YOU ✨
+  </div>
+
+  <h1>
+    Happy Birthday<br>
+    <span>Akshansh!</span> 🎂
+  </h1>
+
+  <p class="hero-text">
+    Today is all about you! 💗<br>
+    A little website filled with pictures, sweet words,
+    and lots of wishes for someone I'm genuinely glad
+    to have as a friend.
+  </p>
+
+  <div class="cake">🎂</div>
+
+  <p>Ready for your little birthday surprise??  huhhhh??? 🎀</p>
+
+  <button class="primary-btn" onclick="openBirthday()">
+    Open Your Surprise 💌
+  </button>
+
+  <button class="secondary-btn"
+    onclick="document.getElementById('memories').scrollIntoView({behavior:'smooth'})">
+    Your Little Photo Diaryyy 📸
+  </button>
+
+</section>
+
+<!-- SIX PHOTO MEMORIES -->
+
+<section id="memories">
+
+  <div class="small-heading">LITTLE MOMENTS, BIG MEMORIES</div>
+  <h2>Your Little Photo Diary 📸</h2>
+
+  <p class="subtitle">
+   Every picture has its own story. 🌷
+  </p>
+
+  <div class="gallery">
+
+    <div class="photo-card">
+      <img src="./images/a1.jpeg" alt="Akshansh memory 1">
+      <p>Always keep smiling and shining 🤍</p>
+      <div class="photo-number">MEMORY NO. 01 🌸</div>
+    </div>
+
+    <div class="photo-card">
+      <img src="./images/a2.jpeg" alt="Akshansh memory 2">
+      <p>Handsome munda!! ✨</p>
+      <div class="photo-number">MEMORY NO. 02 🦋</div>
+    </div>
+
+    <div class="photo-card">
+      <img src="./images/a3.jpeg" alt="Akshansh memory 3">
+      <p> Main Character Energy 💗</p>
+      <div class="photo-number">MEMORY NO. 03 🎀</div>
+    </div>
+
+    <div class="photo-card">
+      <img src="./images/a4.jpeg" alt="Akshansh memory 4">
+      <p>More laughter and memories ahead 🫶</p>
+      <div class="photo-number">MEMORY NO. 04 🌷</div>
+    </div>
+
+    <div class="photo-card">
+      <img src="./images/a5.jpeg" alt="Akshansh memory 5">
+      <p>Sherrrr 🌻</p>
+      <div class="photo-number">MEMORY NO. 05 🧸</div>
+    </div>
+
+    <div class="photo-card">
+      <img src="./images/a6.jpeg" alt="Akshansh memory 6">
+      <p>Stylee oo ho hooo 💕</p>
+      <div class="photo-number">MEMORY NO. 06 🎂</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FRIENDSHIP WISHES -->
+
+<section>
+
+  <div class="small-heading">A FEW LITTLE REMINDERS</div>
+  <h2>Things I Wish for You 🌷</h2>
+
+  <p class="subtitle">
+    Because you deserve so much more than just a birthday wish.
+  </p>
+
+  <div class="friendship-cards">
+
+    <div class="friend-card">
+      <span class="emoji">🌸</span>
+      <strong>Endless Happiness</strong>
+      <p>
+        May you always have reasons to smile
+        and people who make you feel appreciated.
+      </p>
+    </div>
+
+    <div class="friend-card">
+      <span class="emoji">🦋</span>
+      <strong>Beautiful Growth</strong>
+      <p>
+        May you become everything you've ever
+        dreamed of becoming. Keep believing in yourself.
+      </p>
+    </div>
+
+    <div class="friend-card">
+      <span class="emoji">🎀</span>
+      <strong>Wonderful Memories</strong>
+      <p>
+        May this year bring unexpected adventures,
+        genuine friendships, and countless happy moments.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PERSONAL BIRTHDAY LETTER -->
+
+<section>
+
+  <div class="small-heading">A LITTLE NOTE FROM ME TO YOU</div>
+  <h2>Dear Akshansh 💌</h2>
+
+  <div class="letter">
+
+    Happy Birthday Mittar!! 🎂💗
+
+    <br><br>
+
+    I hope your special day is filled with laughter,
+    happiness, love and wonderful moments.
+
+    <br><br>
+
+    I pray ki bhagwanji tumhe hrr buri nazar se bchaye,
+    hmesha khush rkhe,khub success de and what not.
+
+    <br><br>
+    
+    I'm really glad to have you as a friend.
+    Thank you for being a part of my world and for
+    all the little moments that make friendship special.
+
+    <br><br>
+
+    You deserve a year full of good surprises,
+    genuine happiness, and memories you'll cherish
+    for a long, long time. 🧿✨
+
+    <div class="signature">
+      Happy Birthday once again, Akshansh! 🫶🌷
+    </div>
+
+  </div>
+</section>
+
+<!-- HIDDEN SURPRISE -->
+
+<section id="surprise">
+
+  <div class="small-heading">PSSST... ONE LAST THING</div>
+  <h2>A Tiny Surprise for You 👀</h2>
+
+  <p class="subtitle">
+    You've reached the end, but there's still
+    one more little message waiting for you. 💗
+  </p>
+
+  <button class="primary-btn" onclick="revealSecret()">
+    Unlock Your Secret Message 🎁
+  </button>
+
+  <div class="secret-box" id="secretBox">
+
+    <h2>Chlo krdo pdhna start
+      (wse toh pdhte ny ho)
+      💗</h2>
+
+    <p>
+      Here's a little reminder that your happiness matters,
+      your dreams matter, and you deserve good things in life.
+
+      <br><br>
+
+      I hope you always find people who understand you
+      (just like me...heheee),moments that make you proud,
+      and reasons to keep smiling even on difficult days.
+
+      <br><br>
+
+     And yeupppp.... You don't always have to pretend to be okay with me.
+     I'm here to listen to you,whether you're happy,sad,confused, or
+     going through something difficult.
+     You can talk to me without overthinking.....smzeeee??????
+
+      <br><br>
+
+      May your birthday be as wonderfulll as the person
+      you're growing into.
+
+      <br><br>
+
+      <strong>
+        Stay happy. Stay awesome. Keep shining. 🌷
+      </strong>
+
+      <br><br>
+
+      <strong>Happiest Bdayyyyy, Akshanshhh! 🎂🎀💗</strong>
+    </p>
+
+    <h3> Partyyyyy kb milri h abb????</h3>
+    <button class="primary-btn" onclick="celebrate()">
+      Now, click here💕
+    </button>
+
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="footer-flower">🌷 🦋 🌸</div>
+
+  Made with love, a little creativity, and lots of wishes. 💗
+
+  <br>
+
+  This little corner of the internet was made just for you.
+
+  <br>
+
+  <strong>Happy Birthday, Akshansh! 🎂</strong>
+
+  <div class="footer-flower">🎀 ✨ 💐</div>
+</footer>
+
+<script>
+
+/* FLOATING FLOWERS, HEARTS & STARS */
+
+function createFloatingEmoji() {
+  const item = document.createElement("div");
+
+  const emojis = [
+    "💗", "💕", "🌸", "🌷",
+    "✨", "🦋", "💐", "🎀"
+  ];
+
+  item.className = "floating-emoji";
+
+  item.textContent =
+    emojis[Math.floor(Math.random() * emojis.length)];
+
+  item.style.left = Math.random() * 100 + "vw";
+
+  item.style.fontSize =
+    (18 + Math.random() * 22) + "px";
+
+  item.style.animationDuration =
+    (4 + Math.random() * 3) + "s";
+
+  document.body.appendChild(item);
+
+  setTimeout(() => item.remove(), 7500);
+}
+
+function celebrate() {
+  for (let i = 0; i < 35; i++) {
+    setTimeout(createFloatingEmoji, i * 100);
+  }
+}
+
+/* OPENING SURPRISE */
+
+function openBirthday() {
+  document.querySelector(".hero h1").innerHTML =
+    "It's YOUR Day,<br><span>Akshansh!</span> 🥳";
+
+  document.querySelector(".hero .hero-text").innerHTML =
+    "Today is your reminder that you deserve " +
+    "happiness, friendship, and beautiful things. 💗";
+
+  celebrate();
+
+  setTimeout(() => {
+    document.getElementById("memories").scrollIntoView({
+      behavior: "smooth"
+    });
+  }, 700);
+}
+
+/* REVEAL SECRET MESSAGE */
+
+function revealSecret() {
+  const box = document.getElementById("secretBox");
+
+  box.classList.add("show");
+
+  celebrate();
+
+  box.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+}
+
+</script>
+
+</body>
+</html>
+```
